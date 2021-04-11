@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="style3.css">
+	<title>3</title>
+</head>
+<body>
+	<a class="wq" href="">Якутия</a>
+	<a class="wq2" href="html4.html">Искатели</a>
+	<a class="wq3" href="html3.html">Работодатели</a>
+    <a class="wq4" href="html.html">Назад</a>
+	<div class="img">
+		<img src="" alt="" background-size: cover;
+		background-repeat: repeat-x;>
+		<div class="container">
+			<img class="web-img" src="D:/рабочий стол/Сайт/images/2 страница/1.png" alt="">
+			<img class="ikon" src="D:/рабочий стол/Сайт/images/ikon.png" alt=""><a class="ssil" href="vxod.html">Вход</a>
+			<div class="intro__inner">
+				<h2 class="intro__suptitle">Найди себе работу</h2>
+                <span>
+				<form action="" method="get">
+                    <script type="text/javascript">
+                        var lastResFind=""; 
+                        var copy_page="";
+                        function TrimStr(s) {
+                             s = s.replace( /^\s+/g, '');
+                          return s.replace( /\s+$/g, '');
+                        }
+                        function FindOnPage(inputId) {
+                          var obj = window.document.getElementById(inputId);
+                          var textToFind;
+                          
+                          if (obj) {
+                            textToFind = TrimStr(obj.value);
+                          } else {
+                            alert("Введенная фраза не найдена");
+                            return;
+                          }
+                          if (textToFind == "") {
+                            alert("Вы ничего не ввели");
+                            return;
+                          }
+                           
+                          if(document.body.innerHTML.indexOf(textToFind)=="-1")
+                          alert("Ничего не найдено, проверьте правильность ввода!");
+                           
+                          if(copy_page.length>0)
+                                document.body.innerHTML=copy_page;
+                          else copy_page=document.body.innerHTML;
+                         
+                           
+                          document.body.innerHTML = document.body.innerHTML.replace(eval("/name="+lastResFind+"/gi")," ");
+                          document.body.innerHTML = document.body.innerHTML.replace(eval("/"+textToFind+"/gi"),"<a name="+textToFind+" style='background-color:#fff891; color: grey; border: 1px solid #cea54c;'>"+textToFind+"</a>");
+                          lastResFind=textToFind;
+                          window.location = '#'+textToFind;
+                         } 
+                        </script>
+					<input  id="text-to-find" autocomplete="off" class="search1" name="s" placeholder="   Языки программирования" type="search">
+					<button onclick="javascript: FindOnPage('text-to-find'); return false;" class="but" type="submit">Поиск</button>
+				  </form>
+                </span>
+
+			</div>
+		</div>
+	</div>
+	<div class="lo">
+		<div class="container">
+			<div class="block1"><p class="d">HTML</p></div>
+            <div class="block2"><p class="d">CSS</p></div>
+            <div class="block3"><p class="d">C#</p></div>
+            <div class="block4"><p class="d">C++</p></div>
+            <div class="block5"><p class="d">Java Script</p></div>
+            <div class="block6"><p class="d">Java</p></div>
+            <div class="block7"><p class="d">PHP</p></div>
+            <div class="block8"><p class="d">Puthon</p></div>
+		</div>
+	</div>
+	<div class="podval">
+		<div class="container">
+			<p class="g">&copy; 2021 команда FUN</p>
+		</div>
+	</div>
+
+</body>
+</html>
